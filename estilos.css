@@ -1,0 +1,156 @@
+/* Configurações Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0fdf4; /* Fundo verde bem clarinho e moderno */
+    color: #2d3748;
+}
+
+/* Cabeçalho Colorido */
+header {
+    background: linear-gradient(135deg, #4ade80, #3b82f6); /* Degradê do Verde para o Azul */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Layout Principal */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #1e3a8a; /* Azul escuro para destacar os títulos */
+    text-align: center;
+}
+
+/* --- Efeito do Cartão Virando (Flip Card) --- */
+.secao-interativa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.cartao {
+    background-color: transparent;
+    width: 300px;
+    height: 350px;
+    perspective: 1000px; /* Cria o efeito 3D */
+}
+
+.cartao-interno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Quando passa o mouse, o cartão gira */
+.cartao:hover .cartao-interno {
+    transform: rotateY(180deg);
+}
+
+.cartao-frente, .cartao-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Esconde a parte de trás enquanto gira */
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Cores vibrantes para as faces do cartão */
+.cartao-frente {
+    background-color: #ffedd5; /* Laranja pastel */
+    border: 3px solid #f97316;
+}
+
+.cartao-verso {
+    background-color: #dbeafe; /* Azul pastel */
+    border: 3px solid #3b82f6;
+    transform: rotateY(180deg);
+}
+
+.cartao-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cartao p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #334155;
+}
+
+/* --- Nova Seção de Explicação --- */
+.secao-explicacao {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.recursos-bengala {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.foco-recurso {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 5px solid #ec4899; /* Detalhe em Rosa para colorir ainda mais */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.foco-recurso h3 {
+    margin-top: 0;
+    color: #db2777;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
